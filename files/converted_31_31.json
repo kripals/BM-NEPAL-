@@ -1,0 +1,702 @@
+{
+    "idinfo": {
+        "citation": {
+            "citeinfo": {
+                "origin": "Montana State Library",
+                "pubdate": "20140710",
+                "title": "Montana Cadastral Framework",
+                "geoform": "vector digital data",
+                "pubinfo": {
+                    "pubplace": "Helena, MT",
+                    "publish": "Montana State Library"
+                },
+                "othercit": "Online linkage is for the individual county databases.  Statewide databases can be found at ftp:\/\/ftp.geoinfo.msl.mt.gov\/Data\/Spatial\/MSDI\/Cadastral\/Parcels\/Statewide",
+                "onlink": "ftp:\/\/ftp.geoinfo.msl.mt.gov\/Data\/Spatial\/MSDI\/Cadastral\/Parcels\/"
+            }
+        },
+        "descript": {
+            "abstract": "Test\n\nThe Montana Cadastral Database is comprised of taxable parcels (fee land) and public land (exempt property). It is not broken down into individual lots, for instance lots 4 & 5, Forest Grove Subdivision may comprise one taxable parcel and the Lot line between lots 4 & 5 is not contained in this database. The database encompasses all the area within Montana.  At this time, the Data is in an ArcSde\/Oracle geodatabase. Each county is available for download as a single ArcGIS personal geodatabase or shapefile. The data is maintained by the MT Department of Revenue (DOR) or in cases of Silver Bow, Cascade, Missoula, Lake, Flathead and Yellowstone counties that are maintained by the individual counties. The data is integrated by Montana State Library Geographic Information Services staff. Each parcel contains an attribute called ParcelID (geocode) that is the parcel identifier. It relates to the geocode in the DOR's Orion database (Computer Assisted Mass Appraisal data - CAMA). Most of the ancillary attribute information is held in this database. Information such as owner name, legal description, and appraised value as well as structural and agricultural data are available within CAMA. SQL Server Express 2000 R2 database files of individual county CAMA data are available for download at the project website listed above. In addition, a SQL Server Express database of selected attributes is available for the entire state. Parcel data is built upon the USDI Bureau of Land Management's (BLM) Geographic Coordinate Database (GCDB). The GCDB is a complex measurement management system that uses a least squares adjustment of existing survey data to come up with a digital representation of the Public Land Survey System (PLSS). For more information on GCDB you should proceed to the Montana\/North Dakota BLM website at http:\/\/www.blm.gov\/mt\/st\/en\/res\/public_room\/cadastral_survey\/gcdb.html. Accuracy varies between townships and it is important to note that the accuracy of the parcel data can't be any more accurate than the GCDB.",
+            "purpose": "Landownership information that is tied to the MT Department of Revenue's ORION database and available for a variety of mapping and query purposes.",
+            "supplinf": "None at this time"
+        },
+        "timeperd": {
+            "timeinfo": {
+                "rngdates": {
+                    "begdate": "1999",
+                    "enddate": "20141208"
+                }
+            },
+            "current": "publication date"
+        },
+        "status": {
+            "progress": "In work",
+            "update": "Continually"
+        },
+        "spdom": {
+            "bounding": {
+                "westbc": "-116.00",
+                "eastbc": "-104.00",
+                "northbc": "49.00",
+                "southbc": "44.5"
+            }
+        },
+        "keywords": {
+            "theme": [
+                {
+                    "themekt": "ISO 19115 Topic Category",
+                    "themekey": [
+                        "planningCadastre",
+                        "boundaries"
+                    ]
+                },
+                {
+                    "themekey": [
+                        "MSDI",
+                        "Montana Spatial Data Infrastructure",
+                        "Cadastral",
+                        "Tax Parcel"
+                    ]
+                }
+            ],
+            "place": {
+                "placekey": "Montana"
+            }
+        },
+        "accconst": "None",
+        "useconst": "The Montana State Library Geographic Information Services provides this product\/service for informational purposes only. The Library did not produce it for, nor is it suitable for legal, engineering, or surveying purposes. Consumers of this information should review or consult the primary data and information sources to ascertain the viability of the information for their purposes. The Library provides these data in good faith but does not represent or warrant its accuracy, adequacy, or completeness.  In no event shall the Library be liable for any incorrect results or analysis; any direct, indirect, special, or consequential damages to any party; or any lost profits arising out of or in connection with the use or the inability to use the data or the services provided. The Library makes these data and services available as a convenience to the public, and for no other purpose. The Library reserves the right to change or revise published data and\/or services at any time.",
+        "ptcontac": {
+            "cntinfo": {
+                "cntorgp": {
+                    "cntorg": "Montana State Library"
+                },
+                "cntaddr": {
+                    "addrtype": "mailing address",
+                    "address": "P.O. Box 201800",
+                    "city": "Helena",
+                    "state": "Montana",
+                    "postal": "59620",
+                    "country": "US"
+                },
+                "cntvoice": "406-444-5354",
+                "cnttdd": "406-444-4799",
+                "cntfax": "406-444-0266",
+                "cntemail": "geoinfo@mt.gov",
+                "hours": "6:30 a.m. to 3:00 p.m. MST",
+                "cntinst": "e-mail contact is preferred"
+            }
+        },
+        "datacred": "These data are made possible by a public\/private partnership including the BLM, several state agencies, local governments, Montan Power Co. Montana\/Dakota Utilities, and Burlington Northern Sante Fe Railroad. The Montana State Library Geographic Information Services provides project management and oversight. Most data are being maintained by staff of the Montana Department of Revenue (DOR)",
+        "native": "Microsoft Windows XP Version 5.1 (Build 2600) Service Pack 3; ESRI ArcGIS 10.0.4.4000"
+    },
+    "dataqual": {
+        "attracc": {
+            "attraccr": "Attributes were complete when returned to ISD from vendor (see data creation process in process steps). We can not verify that these attributes will remain complete when the data is in maintenance."
+        },
+        "logic": "Databases checked for standardization",
+        "complete": "There are known unresolved parcels in some townships. As township level metadata becomes available these known ommissions will be documented. Until then the data should be considered 99 percent complete.",
+        "posacc": {
+            "horizpa": {
+                "horizpar": "Please refer to the GCDB reference in the abstract. The data can't be more accurate than the GCDB township from which it was developed. Positional accuracy of GCDB townships vary based on the number and quality of surveys and control points. To find the positional accuracy of a GCDB township, one can download the file from their website and examine the .pgc file."
+            }
+        },
+        "lineage": {
+            "srcinfo": {
+                "srccite": {
+                    "citeinfo": {
+                        "origin": "MT Department of Revenue",
+                        "title": "MT Department of Revenue Orion (CAMA) data"
+                    }
+                },
+                "typesrc": "None",
+                "srccitea": "MT Department of Revenue Orion (CAMA) data"
+            },
+            "procstep": {
+                "procdesc": "This process describes the process used in most counties. Some counties had existing data and different processes were followed. If interested in data from Missoula, Yellowstone, Silver Bow, Ravalli, Lake or Cascade you should check the metadata (if existing) for those counties. General Process: Download GCDB Download DOR CAMA file Process aliquot parts using ISD created software Proof maps Identify missing parcels Send missing parcels to vendor Vendor researchs missing parcels Vendor converts missing parcels qa\/qc database checked for consistancy identify unresolved parcels if under 5% all parcels to convert vendor work done DOR researched unresolved parcels DOR or ISD converts remaining unresolved parcels final hardcopy maps data on ftp and website",
+                "procdate": "Not complete",
+                "proccont": {
+                    "cntinfo": {
+                        "cntorgp": {
+                            "cntorg": "Montana State Library",
+                            "cntper": "Montana State Library"
+                        },
+                        "cntvoice": "406-444-5354",
+                        "cntfax": "406-444-0266",
+                        "cntemail": "geoinfo@mt.gov",
+                        "hours": "6:30 a.m. to 3:00 p.m. MST"
+                    }
+                }
+            }
+        }
+    },
+    "spdoinfo": {
+        "direct": "Vector",
+        "ptvctinf": {
+            "sdtsterm": {
+                "sdtstype": "GT-polygon composed of chains",
+                "ptvctcnt": "914792"
+            }
+        }
+    },
+    "eainfo": {
+        "detailed": {
+            "enttyp": {
+                "enttypl": "OwnerParcel",
+                "enttypd": "Taxable land parcel as defined by MT. Dept. of Revenue and the Counties",
+                "enttypds": "MSL, DOR, counties"
+            },
+            "attr": [
+                {
+                    "attrlabl": "OBJECTID",
+                    "attrdef": "Internal feature number.",
+                    "attrdefs": "ESRI",
+                    "attrdomv": {
+                        "udom": "Sequential unique whole numbers that are automatically generated."
+                    }
+                },
+                {
+                    "attrlabl": "SHAPE",
+                    "attrdef": "Feature geometry.",
+                    "attrdefs": "ESRI",
+                    "attrdomv": {
+                        "udom": "Coordinates defining the features."
+                    }
+                },
+                {
+                    "attrlabl": "Shape_Area",
+                    "attrdef": "Area of feature in internal units squared.",
+                    "attrdefs": "ESRI",
+                    "attrdomv": {
+                        "udom": "Positive real numbers that are automatically generated."
+                    }
+                },
+                {
+                    "attrlabl": "Shape_Length",
+                    "attrdef": "Length of feature in internal units.",
+                    "attrdefs": "ESRI",
+                    "attrdomv": {
+                        "udom": "Positive real numbers that are automatically generated."
+                    }
+                },
+                {
+                    "attrlabl": "PARCELID",
+                    "attrdef": "Feature Parcel identifier number (geocode)",
+                    "attrdefs": "DOR",
+                    "attrmfrq": "As needed"
+                },
+                {
+                    "attrlabl": "TaxYear",
+                    "attrdef": "Tax year for which information is relevant",
+                    "attrdefs": "DOR"
+                },
+                {
+                    "attrlabl": "PropertyID",
+                    "attrdef": "Internal number that uniquely identifies each property",
+                    "attrdefs": "DOR"
+                },
+                {
+                    "attrlabl": "AssessmentCode",
+                    "attrdef": "Code assigned to property linking it to an assessment notice",
+                    "attrdefs": "DOR"
+                },
+                {
+                    "attrlabl": "COUNTYCD",
+                    "attrdef": "Numeric code for Montana Counties",
+                    "attrdefs": "State of Montana",
+                    "attrdomv": {
+                        "edom": [
+                            {
+                                "edomv": "33",
+                                "edomvd": "Treasure County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "39",
+                                "edomvd": "Falon County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "13",
+                                "edomvd": "Ravalli County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "52",
+                                "edomvd": "Wibaux County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "32",
+                                "edomvd": "Stillwater County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "38",
+                                "edomvd": "Glacier County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "51",
+                                "edomvd": "Jefferson County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "49",
+                                "edomvd": "Park County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "47",
+                                "edomvd": "Meagher County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "50",
+                                "edomvd": "Garfield County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "6",
+                                "edomvd": "Gallatin County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "25",
+                                "edomvd": "Madison County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "18",
+                                "edomvd": "Beaverhead County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "56",
+                                "edomvd": "Lincoln County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "17",
+                                "edomvd": "Roosevelt County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "11",
+                                "edomvd": "Phillips County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "15",
+                                "edomvd": "Lake County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "19",
+                                "edomvd": "Choteau County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "36",
+                                "edomvd": "Judith Basin County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "40",
+                                "edomvd": "Sweet Grass County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "12",
+                                "edomvd": "Hill County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "41",
+                                "edomvd": "McCone County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "3",
+                                "edomvd": "Yellowstone County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "7",
+                                "edomvd": "Flathead County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "10",
+                                "edomvd": "Carbon County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "31",
+                                "edomvd": "Teton County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "2",
+                                "edomvd": "Cascade County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "22",
+                                "edomvd": "Big Horn County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "28",
+                                "edomvd": "Powell County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "23",
+                                "edomvd": "Musselshell County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "21",
+                                "edomvd": "Toole County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "8",
+                                "edomvd": "Fergus County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "16",
+                                "edomvd": "Dawson County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "35",
+                                "edomvd": "Sanders County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "54",
+                                "edomvd": "Mineral County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "55",
+                                "edomvd": "Petroleum County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "45",
+                                "edomvd": "Prairie County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "1",
+                                "edomvd": "Silver Bow County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "34",
+                                "edomvd": "Sheridan County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "26",
+                                "edomvd": "Pondera County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "9",
+                                "edomvd": "Powder River County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "53",
+                                "edomvd": "Golden Valley County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "27",
+                                "edomvd": "Richland County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "14",
+                                "edomvd": "Custer County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "20",
+                                "edomvd": "Valley County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "24",
+                                "edomvd": "Blanine County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "30",
+                                "edomvd": "Deer Lodge County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "29",
+                                "edomvd": "Rosebud County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "4",
+                                "edomvd": "Missoula County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "5",
+                                "edomvd": "Lewis and Clark County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "44",
+                                "edomvd": "Wheatland County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "42",
+                                "edomvd": "Carter County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "43",
+                                "edomvd": "Broadwater County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "46",
+                                "edomvd": "Granite County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "37",
+                                "edomvd": "Daniels County",
+                                "edomvds": "State of Montana"
+                            },
+                            {
+                                "edomv": "48",
+                                "edomvd": "Liberty County",
+                                "edomvds": "State of Montana"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "attrlabl": "TOWNSHIP",
+                    "attrdef": "Township number that the property is located in (North or South)"
+                },
+                {
+                    "attrlabl": "Range",
+                    "attrdef": "Township range number that the property is located in (East or West)"
+                },
+                {
+                    "attrlabl": "Section",
+                    "attrdef": "Section number of the township that the property is located in"
+                },
+                {
+                    "attrlabl": "AddressLine1",
+                    "attrdef": "Parcel Street Address ",
+                    "attrdefs": "DOR"
+                },
+                {
+                    "attrlabl": "AddressLine2",
+                    "attrdefs": "DOR"
+                },
+                {
+                    "attrlabl": "CityStateZip",
+                    "attrdef": "City, State and Zip Code of Property Address"
+                },
+                {
+                    "attrlabl": "SUBDIVISION",
+                    "attrdef": "Addition or Subdivision in which the parcel is located",
+                    "attrdefs": "DOR"
+                },
+                {
+                    "attrlabl": "CertificateOfSurvey",
+                    "attrdef": "Certificate of Survey Number",
+                    "attrdefs": "DOR"
+                },
+                {
+                    "attrlabl": "PropAccess",
+                    "attrdef": "Type of road access",
+                    "attrdefs": "DOR"
+                },
+                {
+                    "attrlabl": "LevyDistrict",
+                    "attrdef": "County Levy District Number",
+                    "attrdefs": "DOR"
+                },
+                {
+                    "attrlabl": "LegalDescriptionShort",
+                    "attrdef": "The legal description of the parcel as found in the deed describing the parcel, especially if no Addition\/Subdivision (925) or Section, Township, Range (927) is entered.  If the parcel's legal description is lengthy, additional entries may be made in the subsidiary ADDITIONAL PROPERTY DESCRIPTION",
+                    "attrdefs": "DOR"
+                },
+                {
+                    "attrlabl": "PropType",
+                    "attrdef": "Key identifying the type of property",
+                    "attrdefs": "DOR"
+                },
+                {
+                    "attrlabl": "ContinuousCropAcres",
+                    "attrdef": "Those lands where the accepted practice is cropping at least 3 out of 4 years",
+                    "attrdefs": "DOR"
+                },
+                {
+                    "attrlabl": "FallowAcres",
+                    "attrdef": "Those lands where the accepted practice is to crop one year followed by a year of summer fallow",
+                    "attrdefs": "DOR"
+                },
+                {
+                    "attrlabl": "FarmsiteAcres",
+                    "attrdef": "The area considered to be the 1 acre of land beneath improvements on agricultural land, usually the area around the dwelling",
+                    "attrdefs": "DOR"
+                },
+                {
+                    "attrlabl": "ForestAcres",
+                    "attrdef": "Forest land exceeding 15 contiguous acres that is capable of producing timber that can be harvested in commercial quantity",
+                    "attrdefs": "DOR"
+                },
+                {
+                    "attrlabl": "GrazingAcres",
+                    "attrdef": "Those lands, either native range or domestic range, which are used to support livestock",
+                    "attrdefs": "DOR"
+                },
+                {
+                    "attrlabl": "WildHayAcres",
+                    "attrdef": "Those lands where either native grass or alfalfa is cut a majority of years for hay",
+                    "attrdefs": "DOR"
+                },
+                {
+                    "attrlabl": "IrrigatedAcres",
+                    "attrdef": "Those lands that are irrigated the majority of the time",
+                    "attrdefs": "DOR"
+                },
+                {
+                    "attrlabl": "NonQualAcres",
+                    "attrdef": "Land under one ownership that falls into the acreage range of 20 - 160 acres for which no agricultural application has been approved.  A grade of N is required",
+                    "attrdefs": "DOR"
+                },
+                {
+                    "attrlabl": "TotalAcres",
+                    "attrdef": "The area in acres of the land segment being described in this entry",
+                    "attrdefs": "DOR"
+                },
+                {
+                    "attrlabl": "TotalBuildingValue",
+                    "attrdef": "Reappraisal building value (a Value Year is June 1 to May 31: e.g. values for 2013 are current June 1, 2013 to May 31, 2014)",
+                    "attrdefs": "DOR"
+                },
+                {
+                    "attrlabl": "TotalLandValue",
+                    "attrdef": "Reappraisal land value (a Value Year is June 1 to May 31: e.g. values for 2013 are current June 1, 2013 to May 31, 2014)",
+                    "attrdefs": "DOR"
+                },
+                {
+                    "attrlabl": "TotalValue",
+                    "attrdef": "Total land and building reappraisal value (a Value Year is June 1 to May 31: e.g. values for 2013 are current June 1, 2013 to May 31, 2014)",
+                    "attrdefs": "DOR"
+                },
+                {
+                    "attrlabl": "OwnerName",
+                    "attrdef": "This is the name of the person to whom correspondence from the system will normally be sent",
+                    "attrdefs": "DOR"
+                },
+                {
+                    "attrlabl": "OwnerAddress1",
+                    "attrdef": "The house or building number, street name, and apartment or unit number, if applicable, of the owner's mailing address",
+                    "attrdefs": "DOR"
+                },
+                {
+                    "attrlabl": "OwnerAddress2",
+                    "attrdef": "Alternate mailing address",
+                    "attrdefs": "DOR"
+                },
+                {
+                    "attrlabl": "OwnerAddress3",
+                    "attrdef": "Alternate mailing address",
+                    "attrdefs": "DOR"
+                },
+                {
+                    "attrlabl": "OwnerCity",
+                    "attrdef": "name of the city or town of the Taxpayer's mailing address",
+                    "attrdefs": "DOR"
+                },
+                {
+                    "attrlabl": "OwnerState",
+                    "attrdef": "The two-character abbreviation of the state of the Taxpayer's mailing address",
+                    "attrdefs": "DOR"
+                },
+                {
+                    "attrlabl": "OwnerZipCode",
+                    "attrdef": "The Zip Code of the owner's mailing address.  If the owner's mailing address is outside of the United States, will be \"00000\"",
+                    "attrdefs": "DOR"
+                },
+                {
+                    "attrlabl": "CareOfTaxpayer",
+                    "attrdef": "The Care-of Taxpayer's Name is the buyer's name in the case of a contract for deed (sale).  This is the name of the person to whom correspondence from the system will normally be sent",
+                    "attrdefs": "DOR"
+                }
+            ]
+        },
+        "overview": {
+            "eaover": "base attributes of taxable land parcels created during conversion. You may encounter other attributes but that means they have been added by the maintainer and were not part of the original data."
+        }
+    },
+    "distinfo": {
+        "distrib": {
+            "cntinfo": {
+                "cntorgp": {
+                    "cntorg": "Montana State Library"
+                },
+                "cntaddr": {
+                    "addrtype": "mailing address",
+                    "address": "P.O. Box 201800",
+                    "city": "Helena",
+                    "state": "MT",
+                    "postal": "59620"
+                },
+                "cntvoice": "406-444-5354",
+                "cnttdd": "406-444-4799",
+                "cntfax": "406-444-0266",
+                "cntemail": "geoinfo@mt.gov",
+                "hours": "6:30 a.m. to 3:00 p.m. MST"
+            }
+        },
+        "resdesc": "Downloadable Data",
+        "distliab": "This data is a cooperative effort between the Montana State Libary Geographic Information Services and the Montana Department of Revenue (DOR) other state agencies, local, governments, USDI BLM and private enterprise. The MSL provides mapped cadastral data, Web development, deployment, and enhancements. The DOR provides maintenance as well as CAMA data relating to the mapped cadastral data. Neither the MSL nor any associated partner, nor their employees, makes any warranty, expressed or implied, including the fitness for a particular purpose, or assumes any legal liability responsibility for the accuracy, completeness, or usefulness of any information, apparatus, product, or process disclosed, or represents that its use would not infringe privately owned rights. In layman's terms: the data not constitute a legal survey; inaccuracies exist with both the mapped data and the CAMA data; when seeking the definitive description of real property, consult the deed recorded at the local county courthouse. State law ( Montana Code Annotated 2-6-109 (1)(a) ) explicitly prohibits State agencies from selling or distributing a list of persons to be used as a mailing list without first securing the permission of those on the list. State law ( MCA 2-6-109 (1)(b) ) also explicitly prohibits anyone from using a list of persons prepared by a state agency as a mailing list without first securing the permission of those on the list. \"A person violating the provisions of subsection (1)(b) is guilty of a misdemeanor.\""
+    },
+    "metainfo": {
+        "metd": "20140710",
+        "metc": {
+            "cntinfo": {
+                "cntorgp": {
+                    "cntorg": "Montana State Library"
+                },
+                "cntaddr": {
+                    "addrtype": "mailing address",
+                    "address": "P.O. Box 201800",
+                    "city": "Helena",
+                    "state": "Montana",
+                    "postal": "59620"
+                },
+                "cntvoice": "406-444-5354",
+                "cnttdd": "406-444-4799",
+                "cntfax": "406-444-0266",
+                "cntemail": "geoinfo@mt.gov",
+                "hours": "6:30 a.m. to 5:00 p.m. MST"
+            }
+        },
+        "metstdn": "FGDC Content Standard for Digital Geospatial Metadata",
+        "metstdv": "FGDC-STD-001-1998",
+        "mettc": "local time"
+    },
+    "Esri": {
+        "PublishedDocID": "{35524afc-669b-4614-9f44-43506ae21a1d}"
+    }
+}
